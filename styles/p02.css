@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@font-face {
+  font-family: "Faktum";
+  src: url("../fonts/FaktumBold.otf");
+  src: url("../fonts/FaktumRegular.otf");
+}
+@font-face {
+  font-family: "Firty Free";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Firty Free"), url("Firty-Free.woff") format("woff");
+}
+@font-face {
+  font-family: "exmouth";
+  src: url("../fonts/exmouth_.ttf");
+}
+html {
+  font-size: 62.5%;
+  background: #1900ff;
+  color: #161515;
+  font-family: "Faktum";
+}
+
+header {
+  z-index: 1;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 30px;
+  border-radius: 10px;
+  position: fixed;
+  width: 480px;
+  height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 28px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  backdrop-filter: blur(4px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px);
+  background-color: rgba(47, 47, 47, 0.759);
+  color: #a1a1a1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+header.active {
+  top: -60px;
+}
+header h1 {
+  width: 14px;
+}
+header h1 a {
+  position: relative;
+  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header h1 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header #gnb ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header #gnb ul li {
+  font-family: "Faktum";
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 2px;
+}
+header #gnb ul li:hover a {
+  font-weight: bold;
+}
+header #gnb ul li:nth-child(1):hover > a {
+  color: #fff;
+}
+header #gnb ul li:nth-child(2):hover > a {
+  color: #fff;
+}
+header #gnb ul li:nth-child(3):hover > a {
+  color: #fff;
+}
+header #gnb ul li:nth-child(4):hover > a {
+  color: #fff;
+}
+header #gnb ul li a {
+  display: inline-block;
+  padding: 5px 8px;
+  position: relative;
+  font-size: 1.2rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-weight: 300;
+}
+header p {
+  opacity: 0;
+  position: absolute;
+  background: url("./images/detail/circle_black.png") center/cover no-repeat;
+  -webkit-animation: circle 10s linear infinite;
+          animation: circle 10s linear infinite;
+  bottom: -50px;
+  right: -50px;
+  z-index: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 0px;
+  height: 0px;
+}
+header #toggleBtn {
+  display: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 28px;
+  height: 20px;
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+header #toggleBtn span {
+  display: block;
+  position: absolute;
+  font-weight: bold;
+  top: 0;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  height: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+header #toggleBtn span:nth-child(2) {
+  top: 50%;
+}
+header #toggleBtn span:last-child {
+  top: 100%;
+}
+
+body {
+  font-family: "Faktum";
+}
+
+main {
+  width: 100%;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+}
+section#detail {
+  width: 100%;
+  height: 100%;
+  padding: 6% 0;
+}
+section#detail div {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+section#detail div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+footer {
+  width: 100%;
+  font-family: "Faktum";
+  height: 100%;
+  color: #fff;
+  padding: 2% 4%;
+  background: #161515;
+}
+footer div {
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer div i {
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 4rem;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+footer div i:hover {
+  color: #3794db;
+}
+footer div div {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  gap: 6px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer div div i.fa-phone {
+  margin-right: 4px;
+  font-size: 1.4rem;
+}
+footer div div i.fa-envelope {
+  margin-right: 6px;
+  font-size: 1.4rem;
+}
+footer div div i.fa-face-smile-wink {
+  margin-right: 6px;
+  font-size: 1.4rem;
+}
+footer p {
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+footer span {
+  font-size: 1.2rem;
+}
