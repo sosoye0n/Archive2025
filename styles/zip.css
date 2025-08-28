@@ -1,0 +1,621 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@font-face {
+  font-family: "Faktum";
+  src: url("../fonts/FaktumBold.otf");
+  src: url("../fonts/FaktumRegular.otf");
+}
+@font-face {
+  font-family: "Firty Free";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Firty Free"), url("Firty-Free.woff") format("woff");
+}
+@font-face {
+  font-family: "exmouth";
+  src: url("../fonts/exmouth_.ttf");
+}
+html {
+  font-size: 62.5%;
+  background: #e8e8e9;
+  color: #161515;
+  font-family: "Faktum";
+}
+
+header {
+  z-index: 1;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 30px;
+  border-radius: 10px;
+  position: fixed;
+  width: 480px;
+  height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 28px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  backdrop-filter: blur(4px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px);
+  background-color: rgba(47, 47, 47, 0.759);
+  color: #a1a1a1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+header.active {
+  top: -60px;
+}
+header h1 {
+  width: 14px;
+}
+header h1 a {
+  position: relative;
+  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header h1 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header #gnb ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header #gnb ul li {
+  font-family: "Faktum";
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 2px;
+}
+header #gnb ul li:hover a {
+  font-weight: bold;
+}
+header #gnb ul li:nth-child(1):hover > a {
+  color: #fff;
+}
+header #gnb ul li:nth-child(2):hover > a {
+  color: #fff;
+}
+header #gnb ul li:nth-child(3):hover > a {
+  color: #fff;
+}
+header #gnb ul li:nth-child(4):hover > a {
+  color: #fff;
+}
+header #gnb ul li a {
+  display: inline-block;
+  padding: 5px 8px;
+  position: relative;
+  font-size: 1.2rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-weight: 300;
+}
+header p {
+  opacity: 0;
+  position: absolute;
+  background: url("./images/detail/circle_black.png") center/cover no-repeat;
+  -webkit-animation: circle 10s linear infinite;
+          animation: circle 10s linear infinite;
+  bottom: -50px;
+  right: -50px;
+  z-index: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 0px;
+  height: 0px;
+}
+header #toggleBtn {
+  display: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 28px;
+  height: 20px;
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+header #toggleBtn span {
+  display: block;
+  position: absolute;
+  font-weight: bold;
+  top: 0;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  height: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+header #toggleBtn span:nth-child(2) {
+  top: 50%;
+}
+header #toggleBtn span:last-child {
+  top: 100%;
+}
+
+body {
+  background: #e8e8e9;
+  font-family: "Faktum";
+}
+
+section {
+  width: 100%;
+}
+section#cover {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../imgs/p2.jpg");
+  background-size: cover; /* 이미지 크기 조절 */
+  background-position: center; /* 위치 조절 */
+  background-repeat: no-repeat;
+}
+section#desc {
+  width: 100%;
+  height: 100%;
+  margin: 6%;
+}
+section#desc div.mainTitle {
+  width: 100%;
+}
+section#desc div.mainTitle span {
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+section#desc div.mainTitle h5 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 20px 0 40px 0;
+}
+section#desc div.mainTitle p {
+  width: 80%;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #3c3c3c;
+}
+section#desc div.mainTitle .skill {
+  width: 100%;
+  gap: 20px;
+}
+section#desc div.mainTitle .skill div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  width: 40px;
+  height: 40px;
+  margin-top: 50px;
+}
+section#desc div.mainTitle .skill div img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: #000;
+  border-radius: 6px;
+}
+section#desc div.urlLink {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 14px;
+  margin: 50px 0;
+}
+section#desc div.urlLink button {
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  padding: 8px 30px;
+  border: 1px solid #3c3c3c;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  color: #161515;
+  cursor: pointer;
+}
+section#desc div.urlLink button:hover {
+  background: #3c3c3c;
+  color: #fff;
+}
+section#detail01 {
+  width: 100%;
+  height: 100%;
+  padding: 0 5%;
+}
+section#detail01 div {
+  width: 100%;
+  width: 100%;
+}
+section#detail01 div.imgBox {
+  width: 100%;
+}
+section#detail01 div.imgBox img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+section#detail01 div.background {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 100px;
+  padding: 0 4%;
+}
+section#detail01 div.background span {
+  font-weight: bold;
+  width: 40%;
+  font-size: 1.4rem;
+  display: block;
+  text-transform: uppercase;
+}
+section#detail01 div.background div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+section#detail01 div.background div h5 {
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+section#detail01 div.background div p {
+  width: 100%;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  font-weight: 400;
+  color: #3c3c3c;
+}
+section#detail01 div.descImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+section#detail01 div.descImg img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section#detail01 div.userResearch {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 60px 0;
+  padding: 0 4%;
+}
+section#detail01 div.userResearch span {
+  font-weight: bold;
+  width: 40%;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: block;
+  text-transform: uppercase;
+}
+section#detail01 div.userResearch div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+section#detail01 div.userResearch div h5 {
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+section#detail01 div.userResearch div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+section#detail01 div.userResearch div div p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  letter-spacing: -0.2;
+  color: #ffffff;
+  background: #161515;
+  border-radius: 50%;
+  padding: 20px;
+}
+section#detail01 div.userResearch div div p div {
+  background: #fff;
+  width: 10px;
+}
+section#detail01 div.userResearch div div p:last-child {
+  background: #abd7f0;
+}
+section#designSystem {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 80px;
+  padding: 8%;
+  background: #202020;
+  color: #fff;
+}
+section#designSystem span {
+  width: 40%;
+  font-size: 2.4rem;
+  font-weight: bold;
+  display: block;
+  text-transform: uppercase;
+  margin: 30px 0;
+}
+section#designSystem div {
+  width: 100%;
+  overflow: hidden;
+}
+section#designSystem div img {
+  border-radius: 20px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section#detail02 {
+  width: 100%;
+  height: 100%;
+  background: #e5e5e5;
+}
+section#detail02 .descTitle {
+  padding: 10% 10% 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+section#detail02 .descTitle span {
+  width: 40%;
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: block;
+  text-transform: uppercase;
+}
+section#detail02 .descTitle div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+section#detail02 .descTitle div p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  font-weight: 400;
+}
+section#detail02 .descTitle div button {
+  margin-top: 20px;
+  padding: 8px 30px;
+  border: 1px solid #3c3c3c;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+section#detail02 .descTitle div button:hover {
+  background: #3c3c3c;
+  color: #fff;
+}
+section#detail02 .secondImg {
+  width: 100%;
+  padding: 6%;
+}
+section#detail02 .secondImg div img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section#detail02 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section#detail03 {
+  width: 100%;
+  height: 100%;
+  background: #e8e8e8;
+}
+section#detail03 .descTitle {
+  padding: 6% 8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+section#detail03 .descTitle span {
+  width: 40%;
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: block;
+  text-transform: uppercase;
+}
+section#detail03 .descTitle div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+section#detail03 .descTitle div p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  font-weight: 400;
+  color: #3c3c3c;
+}
+section#detail03 .descTitle div button {
+  margin-top: 20px;
+  padding: 8px 30px;
+  border: 1px solid #3c3c3c;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  color: #3c3c3c;
+  cursor: pointer;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+section#detail03 .descTitle div button:hover {
+  background: #3c3c3c;
+  color: #fff;
+}
+section#detail03 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+footer {
+  width: 100%;
+  font-family: "Faktum";
+  height: 100%;
+  color: #fff;
+  padding: 2% 4%;
+  background: #161515;
+}
+footer div {
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer div i {
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 4rem;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+footer div i:hover {
+  color: #3794db;
+}
+footer div div {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  gap: 6px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer div div i.fa-phone {
+  margin-right: 4px;
+  font-size: 1.4rem;
+}
+footer div div i.fa-envelope {
+  margin-right: 6px;
+  font-size: 1.4rem;
+}
+footer div div i.fa-face-smile-wink {
+  margin-right: 6px;
+  font-size: 1.4rem;
+}
+footer p {
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+footer span {
+  font-size: 1.2rem;
+}

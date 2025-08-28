@@ -1,0 +1,129 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-size: 62.5%;
+  color: #161515;
+  background: #e8e8e9;
+  font-family: "yoon";
+}
+
+main section {
+  width: 100%;
+  height: 100%;
+}
+main section#topImg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+main section#topImg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main section#category {
+  font-family: "Faktum";
+  padding: 0 4%;
+  margin-top: 200px;
+}
+main section#category h4 {
+  font-size: 8rem;
+  letter-spacing: -0.2rem;
+  font-weight: bold;
+  color: #323232;
+}
+main section#category ul {
+  margin-top: 10px;
+  margin-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+main section#category ul li {
+  font-size: 1.2rem;
+  border: 1px solid #c2c2c2;
+  border-radius: 63px;
+  padding: 6px 20px;
+  color: #7c7c7c;
+}
+main section#projectContainer .projectBoxWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+main section#projectContainer .projectBoxWrapper .projectBox {
+  cursor: pointer;
+  position: relative;
+  width: 50%;
+  /* hover 시 보이게 설정 */
+}
+main section#projectContainer .projectBoxWrapper .projectBox .imgBox {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 2/1;
+  text-wrap: balance;
+}
+main section#projectContainer .projectBoxWrapper .projectBox .imgBox img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main section#projectContainer .projectBoxWrapper .projectBox .hoverBox {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px) saturate(120%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+main section#projectContainer .projectBoxWrapper .projectBox .hoverBox .hoverInfo {
+  padding: 6%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+main section#projectContainer .projectBoxWrapper .projectBox .hoverBox .hoverInfo span {
+  color: #fff;
+  display: block;
+  font-size: 4em;
+  font-weight: 500;
+}
+main section#projectContainer .projectBoxWrapper .projectBox .hoverBox .hoverInfo p {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #b8b8b8;
+  font-weight: 400;
+}
+main section#projectContainer .projectBoxWrapper .projectBox:hover .hoverBox {
+  opacity: 1;
+  visibility: visible;
+}
