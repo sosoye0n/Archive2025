@@ -24,7 +24,6 @@
 
 html {
   font-size: 62.5%;
-  // font-family: "Noto Sans";
 }
 
 // header
@@ -263,6 +262,128 @@ main {
         }
       }
     }
+    &#contents {
+      width: 100%;
+      background: #e8e8e9;
+      color: #161515;
+      padding: 5%;
+      padding-top: 12%;
+      h4 {
+        font-size: 2rem;
+        margin-bottom: 50px;
+      }
+      ul {
+        li {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+          width: 100%;
+          a {
+            transition: all 0.6s;
+            &:hover {
+              color: #323232;
+            }
+            font-size: 8rem;
+            font-weight: 600;
+            letter-spacing: -0.3rem;
+            color: #c8c8c8;
+            i {
+              font-size: 4rem;
+            }
+          }
+          div {
+            transition: all 0.6s;
+            position: absolute;
+            right: 6%;
+            width: 300px;
+            height: 120px;
+            opacity: 0;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 8px;
+            }
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    &#select {
+      width: 100%;
+      background: #e8e8e9;
+      color: #161515;
+      padding: 0 6%;
+      margin-bottom: 100px;
+      .line {
+        width: 100%;
+        height: 1px;
+        background: #161515;
+        margin-top: 100px;
+      }
+      h4 {
+        font-size: 6rem;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        font-weight: 300;
+        letter-spacing: -0.2rem;
+      }
+      ul {
+        width: 100%;
+        height: 100%;
+        li {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          margin-bottom: 60px;
+          overflow: hidden;
+          aspect-ratio: 2 / 1;
+          border-radius: 10px;
+          .ProjectTitle {
+            cursor: pointer;
+            // background-color: rgba(0, 0, 0, 0.4);
+            div {
+              overflow: hidden;
+              width: 100%;
+              &:first-child {
+                position: absolute;
+                bottom: 6%;
+                left: 3%;
+                z-index: 2;
+              }
+            }
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            img {
+              transition: all 0.6s;
+              &:hover {
+                transform: scale(1.1);
+              }
+              border-radius: 10px;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              overflow: hidden;
+              z-index: -1;
+            }
+            p {
+              &:first-child {
+                font-size: 1.4rem;
+                margin-bottom: 12px;
+                color: #c8c8c8;
+              }
+              font-size: 3rem;
+              font-weight: 500;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
     &#about {
       // background: url("./imgs/profile.png") center/cover no-repeat;
       width: 100%;
@@ -271,6 +392,8 @@ main {
       aspect-ratio: 14 / 1;
       text-wrap: balance;
       position: relative;
+      margin-top: 120px;
+      z-index: 0;
       img {
         object-fit: cover;
         width: 100%;
@@ -278,7 +401,7 @@ main {
         bottom: 0;
         height: 100%;
         width: 100%;
-        // z-index: 2;
+        // z-index: 0;
       }
       p {
         font-family: "Firty Free";
@@ -290,9 +413,9 @@ main {
         position: absolute;
         text-wrap: balance;
         position: relative;
-        top: 10vh;
-        z-index: 0;
-        // letter-spacing: 20px;
+        top: 3vh;
+        z-index: -1;
+        // letterspacing: 20px;
       }
       div {
         width: 100%;
@@ -346,158 +469,6 @@ main {
         }
       }
     }
-    &#profile {
-      width: 100%;
-      // height: 100vh;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      font-size: 1.4rem;
-      font-size: 300;
-      // justify-content: space-between;
-      // background-image: url("./imgs/profileBG.png");
-      // background-size: cover; /* 이미지 크기 조절 */
-      // background-position: center; /* 위치 조절 */
-      // background-repeat: no-repeat;
-      color: #fff;
-      // background: #ffffff;
-      // width: 50%;xw
-      justify-content: center;
-      align-items: center;
-      margin: 6% 0;
-      .slogan {
-        // margin: 100px;
-        font-size: 2.4rem;
-        text-align: center;
-        font-weight: 400;
-      }
-      ul {
-        margin-top: 30px;
-        display: flex;
-        gap: 20px;
-      }
-    }
-    &#contents {
-      width: 100%;
-      background: #e8e8e9;
-      color: #161515;
-      padding: 5%;
-      padding-top: 12%;
-      h4 {
-        font-size: 2rem;
-        margin-bottom: 30px;
-      }
-      ul {
-        li {
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 10px;
-          width: 100%;
-          a {
-            transition: all 0.6s;
-            &:hover {
-              color: #323232;
-            }
-            font-size: 8rem;
-            font-weight: 600;
-            letter-spacing: -0.3rem;
-            color: #c8c8c8;
-            i {
-              font-size: 4rem;
-            }
-          }
-          div {
-            transition: all 0.6s;
-            position: absolute;
-            right: 6%;
-            width: 300px;
-            height: 120px;
-            opacity: 0;
-            overflow: hidden;
-            img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              border-radius: 8px;
-            }
-            &:hover {
-              opacity: 1;
-            }
-          }
-        }
-      }
-    }
-    &#select {
-      width: 100%;
-      background: #e8e8e9;
-      color: #161515;
-      padding: 6%;
-      .line {
-        width: 100%;
-        height: 1px;
-        background: #161515;
-      }
-      h4 {
-        font-size: 6rem;
-        margin-top: 40px;
-        margin-bottom: 20px;
-        font-weight: 300;
-        letter-spacing: -0.2rem;
-      }
-      ul {
-        width: 100%;
-        height: 100%;
-        li {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          margin-bottom: 30px;
-          overflow: hidden;
-          aspect-ratio: 2 / 1;
-          border-radius: 10px;
-
-          .ProjectTitle {
-            cursor: pointer;
-            // background-color: rgba(0, 0, 0, 0.4);
-            div {
-              overflow: hidden;
-              width: 100%;
-
-              &:first-child {
-                position: absolute;
-                bottom: 6%;
-                left: 3%;
-                z-index: 2;
-              }
-            }
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            img {
-              transition: all 0.6s;
-              &:hover {
-                transform: scale(1.1);
-              }
-              border-radius: 10px;
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              overflow: hidden;
-              z-index: -1;
-            }
-            p {
-              &:first-child {
-                font-size: 1.4rem;
-                margin-bottom: 8px;
-              }
-              font-size: 3rem;
-              font-weight: 500;
-              color: #fff;
-            }
-          }
-        }
-      }
-    }
     &#scrollSection {
       background: #b5bed2;
       color: #161515;
@@ -523,6 +494,7 @@ main {
     }
   }
 }
+
 //footer
 footer {
   width: 100%;
@@ -578,6 +550,7 @@ footer {
   }
 }
 
+//애니메이션
 @keyframes scrolling {
   0% {
     transform: translateX(0);
