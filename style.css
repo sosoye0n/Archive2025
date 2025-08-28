@@ -332,7 +332,7 @@ main section#contents ul li div img {
      object-fit: cover;
   border-radius: 8px;
 }
-main section#contents ul li div:hover {
+main section#contents ul li:hover div {
   opacity: 1;
 }
 main section#select {

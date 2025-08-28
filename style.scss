@@ -303,9 +303,9 @@ main {
               object-fit: cover;
               border-radius: 8px;
             }
-            &:hover {
-              opacity: 1;
-            }
+          }
+          &:hover div {
+            opacity: 1;
           }
         }
       }
