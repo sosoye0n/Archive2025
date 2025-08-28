@@ -178,6 +178,16 @@ main section#intro {
   position: relative;
   overflow: hidden;
 }
+main section#intro video {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
+}
+main section#intro video .fade-in {
+  opacity: 1;
+}
 main section#intro img {
   display: block;
   color: #3d3d3d;

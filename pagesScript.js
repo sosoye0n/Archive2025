@@ -15,8 +15,8 @@ if (typeof Lenis === "function") {
 const header = document.querySelector("header");
 const headerInner = `
       <h1>
-        <a href="index.html" title="Home">
-          <img src="./imgs/logo.png" alt="Home" />
+        <a href="../index.html" title="Home">
+          <img src="../imgs/logo.png" alt="Home" />
         </a>
       </h1>
       <button id="toggleBtn">
@@ -27,16 +27,16 @@ const headerInner = `
       <nav id="gnb">
         <ul>
           <li>
-            <a href="category.html" title="Promotion">Promotion</a>
+            <a href="../category.html" title="Promotion">Promotion</a>
           </li>
           <li>
-            <a href="category2.html" title="Developer">Developer</a>
+            <a href="../category2.html" title="Developer">Developer</a>
           </li>
           <li>
-            <a href="category3.html" title="Artwork">Artwork</a>
+            <a href="../category3.html" title="Artwork">Artwork</a>
           </li>
-          <li >
-            <a href="index.html" title="home">About Me</a>
+          <li>
+            <a href="../index.html" title="home">About Me</a>
           </li>
         </ul>
         <p></p>
