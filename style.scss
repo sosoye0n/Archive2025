@@ -48,7 +48,6 @@ header {
   // border: 1px solid rgba(255, 255, 255, 0.125);
   color: #a1a1a1;
   transition: all 0.5s;
-
   &.active {
     top: -60px;
   }
@@ -73,11 +72,11 @@ header {
       li {
         font-family: "Faktum";
         text-transform: uppercase;
-        font-weight: bold;
+        // font-weight: bold;
         padding: 2px;
-        &:hover a {
-          font-weight: bold;
-        }
+        // &:hover a {
+        //   // font-weight: bold;
+        // }
         &:nth-child(1):hover > a {
           color: #fff;
         }
@@ -152,20 +151,20 @@ body {
   font-family: "Faktum";
 }
 
-header {
-  div {
-    position: absolute;
-    padding: 1.6%;
-    a {
-      width: 100%;
-      height: 100%;
-      img {
-        width: 40px;
-        // mix-blend-mode: difference;
-      }
-    }
-  }
-}
+// header {
+//   div {
+//     position: absolute;
+//     padding: 1.6%;
+//     a {
+//       width: 100%;
+//       height: 100%;
+//       img {
+//         width: 40px;
+//         // mix-blend-mode: difference;
+//       }
+//     }
+//   }
+// }
 
 main {
   section {
@@ -336,13 +335,12 @@ main {
           position: relative;
           width: 100%;
           height: 100%;
-          margin-bottom: 60px;
+          margin-bottom: 40px;
           overflow: hidden;
           aspect-ratio: 2 / 1;
           border-radius: 10px;
           .ProjectTitle {
             cursor: pointer;
-            // background-color: rgba(0, 0, 0, 0.4);
             div {
               overflow: hidden;
               width: 100%;
@@ -367,6 +365,20 @@ main {
               object-fit: cover;
               overflow: hidden;
               z-index: -1;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: rgba(0, 0, 0, 0.4); // 검은 반투명
+              backdrop-filter: saturate(120%);
+              // opacity: 0;
+              opacity: 1;
+              pointer-events: none;
+              // z-index: 1;
             }
             p {
               &:first-child {

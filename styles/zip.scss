@@ -8,19 +8,12 @@
   src: url("../fonts/FaktumRegular.otf");
 }
 @font-face {
-  font-family: "Firty Free";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Firty Free"), url("Firty-Free.woff") format("woff");
-}
-@font-face {
   font-family: "exmouth";
   src: url("../fonts/exmouth_.ttf");
 }
 
 html {
   font-size: 62.5%;
-  // font-family: "Noto Sans";
   background: #e8e8e9;
   color: #161515;
   font-family: "Faktum";
@@ -149,7 +142,22 @@ header {
 
 body {
   background: #e8e8e9;
-  font-family: "Faktum";
+  font-family: "Noto Sans";
+}
+
+button {
+  margin-top: 20px;
+  padding: 8px 30px;
+  border: 1px solid #3c3c3c;
+  background: #e8e8e9;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.6s;
+  &:hover {
+    background: #3c3c3c;
+    color: #fff;
+  }
 }
 
 section {
@@ -157,10 +165,38 @@ section {
   &#cover {
     width: 100%;
     height: 100vh;
-    background-image: url("../imgs/p2.jpg");
-    background-size: cover; /* 이미지 크기 조절 */
-    background-position: center; /* 위치 조절 */
-    background-repeat: no-repeat;
+    background: url("../imgs/p2.jpg") center/cover no-repeat;
+    position: relative;
+    div {
+      &.urlLink {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        // gap: 14px;
+        // margin: 50px 0;
+        position: absolute;
+        left: 6%;
+        bottom: 10%;
+        height: auto;
+        width: auto;
+        button {
+          width: 150px;
+          transition: all 0.6s;
+          padding: 8px 30px;
+          border: 1px solid #000000;
+          border-radius: 30px;
+          font-size: 1.2rem;
+          color: #161515;
+          cursor: pointer;
+          background: none;
+          &:hover {
+            background: #000000;
+            color: #fff;
+          }
+        }
+      }
+    }
   }
   &#desc {
     width: 100%;
@@ -170,9 +206,9 @@ section {
       &.mainTitle {
         width: 100%;
         span {
-          font-weight: bold;
           font-size: 1.4rem;
           text-transform: uppercase;
+          font-family: "Faktum";
         }
         h5 {
           font-size: 2.4rem;
@@ -182,7 +218,7 @@ section {
         p {
           width: 80%;
           font-size: 1.2rem;
-          line-height: 1.8;
+          line-height: 2;
           color: #3c3c3c;
         }
         .skill {
@@ -200,26 +236,6 @@ section {
               background: #000;
               border-radius: 6px;
             }
-          }
-        }
-      }
-      &.urlLink {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        gap: 14px;
-        margin: 50px 0;
-        button {
-          transition: all 0.6s;
-          padding: 8px 30px;
-          border: 1px solid #3c3c3c;
-          border-radius: 30px;
-          font-size: 1.2rem;
-          color: #161515;
-          cursor: pointer;
-          &:hover {
-            background: #3c3c3c;
-            color: #fff;
           }
         }
       }
@@ -249,11 +265,11 @@ section {
         margin-top: 100px;
         padding: 0 4%;
         span {
-          font-weight: bold;
           width: 40%;
           font-size: 1.4rem;
           display: block;
           text-transform: uppercase;
+          font-family: "Faktum";
         }
         div {
           // width: 60%;
@@ -265,6 +281,7 @@ section {
             width: 100%;
             font-size: 1.4rem;
             font-weight: 700;
+            // font-weight: 400;
             margin-bottom: 40px;
           }
           p {
@@ -292,12 +309,11 @@ section {
         margin: 60px 0;
         padding: 0 4%;
         span {
-          font-weight: bold;
           width: 40%;
           font-size: 1.4rem;
-          font-weight: 700;
           display: block;
           text-transform: uppercase;
+          font-family: "Faktum";
         }
         div {
           // width: 60%;
@@ -337,6 +353,7 @@ section {
               }
               &:last-child {
                 background: #abd7f0;
+                color: #000;
               }
             }
           }
@@ -356,10 +373,10 @@ section {
     span {
       width: 40%;
       font-size: 2.4rem;
-      font-weight: bold;
       display: block;
       text-transform: uppercase;
       margin: 30px 0;
+      font-family: "Faktum";
     }
     div {
       width: 100%;
@@ -371,7 +388,6 @@ section {
       }
     }
   }
-
   &#detail02 {
     width: 100%;
     height: 100%;
@@ -384,9 +400,9 @@ section {
       span {
         width: 40%;
         font-size: 1.4rem;
-        font-weight: bold;
         display: block;
         text-transform: uppercase;
+        font-family: "Faktum";
       }
       div {
         display: flex;
@@ -397,19 +413,6 @@ section {
           font-size: 1.2rem;
           line-height: 1.8;
           font-weight: 400;
-        }
-        button {
-          margin-top: 20px;
-          padding: 8px 30px;
-          border: 1px solid #3c3c3c;
-          border-radius: 30px;
-          font-size: 1.2rem;
-          cursor: pointer;
-          transition: all 0.6s;
-          &:hover {
-            background: #3c3c3c;
-            color: #fff;
-          }
         }
       }
     }
@@ -435,20 +438,16 @@ section {
   &#detail03 {
     width: 100%;
     height: 100%;
-    // margin-top: 80px;
     background: #e8e8e8;
-    // padding-top: 30px;
     .descTitle {
-      // padding: 6% 10% 5;
       padding: 6% 8%;
-      // padding-top: 6%;
       display: flex;
       span {
         width: 40%;
         font-size: 1.4rem;
-        font-weight: bold;
         display: block;
         text-transform: uppercase;
+        font-family: "Faktum";
       }
       div {
         display: flex;
