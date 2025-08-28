@@ -30,10 +30,10 @@ const headerInner = `
             <a href="category.html" title="Promotion">Promotion</a>
           </li>
           <li>
-            <a href="developer.html" title="Developer">Developer</a>
+            <a href="category2.html" title="Developer">Developer</a>
           </li>
           <li>
-            <a href="Artwork.html" title="Artwork">Artwork</a>
+            <a href="category3.html" title="Artwork">Artwork</a>
           </li>
           <li>
             <a href="index.html" title="home">About Me</a>
@@ -51,8 +51,17 @@ const footerInner = `
         <div>
           <div>
             <span
-              ><i class="fab fa-behance-square"></i><i class="fab fa-github-square"></i><i class="fab fa-linkedin"></i
-            ></span>
+              ><a href="https://www.behance.net/sosoyeon98c8a4">
+              <i class="fab fa-behance-square"></i>
+              </a>
+              <a href="https://github.com/sosoye0n">
+              <i class="fab fa-github-square"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/%EC%86%8C%EC%97%B0-%EA%B9%80-850a1b1a9/">
+              <i class="fab fa-linkedin"></i
+            >
+              </a>
+              </span>
           </div>
           <div>
             <span><i class="fas fa-face-smile-wink"></i>KIM SO YEON</span>
@@ -106,4 +115,5 @@ const rollingBannerInner = `
           </div>
         </article>
 `;
+
 section.innerHTML = rollingBannerInner;
