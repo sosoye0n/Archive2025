@@ -168,6 +168,7 @@ body {
   color: #161515;
   background: #e8e8e9;
   font-family: "Faktum";
+  overflow: hidden;
 }
 
 main section#intro {
@@ -177,9 +178,11 @@ main section#intro {
   background: url("./imgs/introBG.png") center/cover no-repeat;
   position: relative;
   overflow: hidden;
+  background: #000;
 }
 main section#intro video {
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transition: opacity 2s ease-in-out;
@@ -192,6 +195,8 @@ main section#intro img {
   display: block;
   color: #3d3d3d;
   position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
   top: 0;
   left: 0;
   padding: 3%;
@@ -401,8 +406,8 @@ main section#select ul li .ProjectTitle::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: saturate(120%);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.2)));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%);
   opacity: 1;
   pointer-events: none;
 }

@@ -13,7 +13,7 @@ promotion[3].addEventListener("click", () => {
   window.location.href = "./pages/d04.html";
 });
 promotion[4].addEventListener("click", () => {
-  window.location.href = "./pages/p05.html";
+  window.location.href = "https://soyeonmusicplayer.netlify.app/";
 });
 promotion[5].addEventListener("click", () => {
   window.location.href = "./pages/p06.html";

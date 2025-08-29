@@ -1,0 +1,547 @@
+@import "./reset.scss";
+@import "./variable.scss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+@font-face {
+  font-family: "Faktum";
+  src: url("../fonts/FaktumBold.otf");
+  src: url("../fonts/FaktumRegular.otf");
+}
+@font-face {
+  font-family: "exmouth";
+  src: url("../fonts/exmouth_.ttf");
+}
+
+html {
+  font-size: 62.5%;
+  background: #e8e8e9;
+  color: #161515;
+  font-family: "Faktum";
+}
+
+// header
+header {
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  border-radius: 10px;
+  position: fixed;
+  width: 480px;
+  height: 36px;
+  // line-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 28px;
+  align-items: center;
+  backdrop-filter: blur(4px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px);
+  background-color: rgba(47, 47, 47, 0.759);
+  // background: transparent;
+  // border: 1px solid rgba(255, 255, 255, 0.125);
+  color: #a1a1a1;
+  transition: all 0.5s;
+
+  &.active {
+    top: -60px;
+  }
+  h1 {
+    width: 14px;
+    a {
+      position: relative;
+      display: inline-block;
+      display: flex;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  #gnb {
+    ul {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      li {
+        font-family: "Faktum";
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 2px;
+        &:hover a {
+          font-weight: bold;
+        }
+        &:nth-child(1):hover > a {
+          color: #fff;
+        }
+        &:nth-child(2):hover > a {
+          color: #fff;
+        }
+        &:nth-child(3):hover > a {
+          color: #fff;
+        }
+        &:nth-child(4):hover > a {
+          color: #fff;
+        }
+        a {
+          // text-transform: uppercase;
+          display: inline-block;
+          padding: 5px 8px;
+          // border-radius: 20px;
+          position: relative;
+          // font-family: map-get($map: $font-family, $key: REM);
+          font-size: 1.2rem;
+          transition: all 0.5s;
+          // font-family: "Faktum";
+          font-weight: 300;
+        }
+      }
+    }
+  }
+  p {
+    opacity: 0;
+    position: absolute;
+    background: url("./images/detail/circle_black.png") center/cover no-repeat;
+    // background: url("https://miro.medium.com/v2/resize:fit:1400/1*6Z263tK4w5XVe_zC4heGwQ.gif") center/cover no-repeat;
+    animation: circle 10s linear infinite;
+    bottom: -50px;
+    right: -50px;
+    z-index: 1;
+    transition: all 0.3s;
+    width: 0px;
+    height: 0px;
+  }
+  #toggleBtn {
+    display: none;
+    transition: all 0.3s;
+    width: 28px;
+    height: 20px;
+    position: relative;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    span {
+      display: block;
+      position: absolute;
+      font-weight: bold;
+      top: 0;
+      left: 0;
+      background: #fff;
+      width: 100%;
+      height: 2px;
+      transition: all 0.3s;
+      &:nth-child(2) {
+        top: 50%;
+      }
+      &:last-child {
+        top: 100%;
+      }
+    }
+  }
+}
+
+body {
+  background: #e8e8e9;
+  font-family: "Noto Sans";
+  i {
+    font-size: 1rem;
+  }
+}
+
+button {
+  margin-top: 20px;
+  padding: 8px 30px;
+  border: 1px solid #3c3c3c;
+  background: #e8e8e9;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.6s;
+  &:hover {
+    background: #3c3c3c;
+    color: #fff;
+  }
+}
+
+section {
+  width: 100%;
+  &#cover {
+    width: 100%;
+    height: 100vh;
+    background: url("../imgs/jjak.gif") center/cover no-repeat;
+    position: relative;
+    div {
+      &.urlLink {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        // gap: 14px;
+        // margin: 50px 0;
+        position: absolute;
+        left: 6%;
+        bottom: 10%;
+        height: auto;
+        width: auto;
+        button {
+          transition: all 0.6s;
+          padding: 8px 30px;
+          border: 1px solid #000000;
+          border-radius: 30px;
+          font-size: 1.2rem;
+          color: #161515;
+          cursor: pointer;
+          background: none;
+          i {
+            font-size: 1rem;
+          }
+          &:hover {
+            background: #000000;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  &#desc {
+    width: 100%;
+    height: 100%;
+    margin: 6%;
+    div {
+      &.mainTitle {
+        width: 100%;
+        span {
+          font-size: 1.4rem;
+          text-transform: uppercase;
+          font-family: "Faktum";
+        }
+        h5 {
+          font-size: 2.4rem;
+          font-weight: 700;
+          margin: 20px 0 40px 0;
+        }
+        p {
+          width: 80%;
+          font-size: 1.2rem;
+          line-height: 2;
+          color: #3c3c3c;
+        }
+        .skill {
+          width: 100%;
+          gap: 20px;
+          div {
+            display: flex;
+            gap: 10px;
+            width: 40px;
+            height: 40px;
+            margin-top: 50px;
+            img {
+              width: 100%;
+              object-fit: cover;
+              background: #000;
+              border-radius: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &#detail01 {
+    width: 100%;
+    height: 100%;
+    padding: 0 5%;
+    // overflow: hidden;
+    div {
+      width: 100%;
+      width: 100%;
+      &.imgBox {
+        width: 100%;
+        img {
+          width: 100%;
+          // height: 100%;
+          object-fit: cover;
+          border-radius: 20px;
+        }
+      }
+      &.background {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        margin-top: 100px;
+        padding: 0 4%;
+        span {
+          width: 40%;
+          font-size: 1.4rem;
+          display: block;
+          text-transform: uppercase;
+          font-family: "Faktum";
+        }
+        div {
+          // width: 60%;
+          display: flex;
+          flex-direction: column;
+          // align-items: end;
+          justify-content: start;
+          h5 {
+            width: 100%;
+            font-size: 1.4rem;
+            font-weight: 700;
+            // font-weight: 400;
+            margin-bottom: 40px;
+          }
+          p {
+            width: 100%;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            font-weight: 400;
+            color: #3c3c3c;
+          }
+        }
+      }
+      &.descImg {
+        // width: 80%;
+        display: flex;
+        justify-content: center;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      &.userResearch {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        margin: 60px 0;
+        padding: 0 4%;
+        span {
+          width: 40%;
+          font-size: 1.4rem;
+          display: block;
+          text-transform: uppercase;
+          font-family: "Faktum";
+        }
+        div {
+          // width: 60%;
+          display: flex;
+          // flex-direction: column;
+          flex-wrap: wrap;
+          // align-items: end;
+          justify-content: start;
+          h5 {
+            width: 100%;
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-bottom: 40px;
+          }
+          div {
+            display: flex;
+            gap: 20px;
+            p {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              // display: block;
+              width: 150px;
+              height: 150px;
+              // width: 50%;
+              font-size: 1.1rem;
+              line-height: 1.4;
+              letter-spacing: -0.2;
+              color: #ffffff;
+              background: #161515;
+              border-radius: 50%;
+              padding: 20px;
+              div {
+                background: #fff;
+                width: 10px;
+              }
+              &:last-child {
+                background: #abd7f0;
+                color: #000;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &#designSystem {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    padding: 8%;
+    background: #202020;
+    color: #fff;
+    span {
+      width: 40%;
+      font-size: 2.4rem;
+      display: block;
+      text-transform: uppercase;
+      margin: 30px 0;
+      font-family: "Faktum";
+    }
+    div {
+      width: 100%;
+      overflow: hidden;
+      img {
+        border-radius: 20px;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &#detail02 {
+    width: 100%;
+    height: 100%;
+    // margin-top: 80px;
+    background: #e5e5e5;
+    // padding-top: 30px;
+    .descTitle {
+      padding: 10% 10% 5%;
+      display: flex;
+      span {
+        width: 40%;
+        font-size: 1.4rem;
+        display: block;
+        text-transform: uppercase;
+        font-family: "Faktum";
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        p {
+          font-size: 1.2rem;
+          line-height: 1.8;
+          font-weight: 400;
+        }
+      }
+    }
+    .secondImg {
+      width: 100%;
+      padding: 6%;
+      // overflow: hidden;
+      div {
+        img {
+          border-radius: 20px;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &#detail03 {
+    width: 100%;
+    height: 100%;
+    background: #e8e8e8;
+    .descTitle {
+      padding: 6% 8%;
+      display: flex;
+      span {
+        width: 40%;
+        font-size: 1.4rem;
+        display: block;
+        text-transform: uppercase;
+        font-family: "Faktum";
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        p {
+          font-size: 1.2rem;
+          line-height: 1.8;
+          font-weight: 400;
+          color: #3c3c3c;
+        }
+        button {
+          margin-top: 20px;
+          padding: 8px 30px;
+          border: 1px solid #3c3c3c;
+          border-radius: 30px;
+          font-size: 1.2rem;
+          color: #3c3c3c;
+          cursor: pointer;
+          transition: all 0.6s;
+          &:hover {
+            background: #3c3c3c;
+            color: #fff;
+          }
+        }
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+//footer
+footer {
+  width: 100%;
+  // height: 300px;
+  font-family: "Faktum";
+  height: 100%;
+  color: #fff;
+  padding: 2% 4%;
+  background: #161515;
+  div {
+    height: 200px;
+    // height: 100%;
+    display: flex;
+    justify-content: space-between;
+    i {
+      cursor: pointer;
+      margin-left: 10px;
+      margin-top: 10px;
+      font-size: 4rem;
+      transition: all 0.6s;
+      &:hover {
+        color: #3794db;
+      }
+    }
+    div {
+      // background: cadetblue;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      // justify-content: end;
+      gap: 6px;
+      justify-content: space-between;
+      i.fa-phone {
+        margin-right: 4px;
+        font-size: 1.4rem;
+      }
+      i.fa-envelope {
+        margin-right: 6px;
+        font-size: 1.4rem;
+      }
+      i.fa-face-smile-wink {
+        margin-right: 6px;
+        font-size: 1.4rem;
+      }
+    }
+  }
+  p {
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  span {
+    font-size: 1.2rem;
+  }
+}
