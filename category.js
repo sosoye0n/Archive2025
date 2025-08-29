@@ -1,7 +1,7 @@
 const promotion = document.querySelectorAll(".projectBox");
 
 promotion[0].addEventListener("click", () => {
-  window.location.href = "./pages/p01.html";
+  window.location.href = "./pages/m1.html";
 });
 promotion[1].addEventListener("click", () => {
   window.location.href = "./pages/p02.html";

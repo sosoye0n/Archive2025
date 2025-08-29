@@ -4,7 +4,7 @@ const projectLinks = [
   "./pages/p02.html", // 첫 번째 li
   "./pages/a01.html", // 첫 번째 li
   "./pages/p04.html", // 첫 번째 li
-  "./pages/a01.html", // 첫 번째 li
+  "./pages/a02.html", // 첫 번째 li
   "./pages/p03.html", // 첫 번째 li
   "./pages/a04.html", // 첫 번째 li
 ];
