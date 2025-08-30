@@ -5,7 +5,6 @@ body {
   font-size: 62.5%;
   color: #161515;
   background: #e8e8e9;
-  font-family: "yoon";
 }
 
 main {
@@ -104,6 +103,44 @@ main {
           &:hover .hoverBox {
             opacity: 1;
             visibility: visible;
+          }
+        }
+      }
+    }
+  }
+}
+
+//반응형
+@media screen and (max-width: 1024px) {
+  main {
+    section {
+      &#topImg {
+        width: 80%;
+      }
+      &#category {
+        margin-top: 150px;
+        h4 {
+          font-size: 6rem;
+        }
+        ul {
+          margin-bottom: 30px;
+          flex-wrap: wrap;
+          li {
+            font-size: 1rem;
+          }
+        }
+      }
+      &#projectContainer {
+        .projectBoxWrapper {
+          .projectBox {
+            width: 100%;
+            .hoverBox {
+              .hoverInfo {
+                span {
+                  font-size: 2.4rem;
+                }
+              }
+            }
           }
         }
       }

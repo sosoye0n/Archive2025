@@ -59,12 +59,22 @@ header {
   backdrop-filter: blur(4px) saturate(180%);
   -webkit-backdrop-filter: blur(16px);
   background-color: rgba(47, 47, 47, 0.759);
+  mix-blend-mode: difference;
   color: #a1a1a1;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 header.active {
   top: -60px;
+}
+header.active {
+  -webkit-transform: translateY(-70px);
+          transform: translateY(-70px);
+}
+header.blendMode {
+  mix-blend-mode: normal;
+  color: #19160f;
+  scroll-behavior: none;
 }
 header h1 {
   width: 14px;
@@ -168,9 +178,9 @@ body {
 }
 
 main section#intro {
-  color: #fff;
   width: 100%;
   height: 100vh;
+  color: #fff;
   background: url("./imgs/introBG.png") center/cover no-repeat;
   position: relative;
   overflow: hidden;
@@ -395,6 +405,16 @@ main section#select ul li .ProjectTitle img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
+main section#select ul li .ProjectTitle p {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #fff;
+}
+main section#select ul li .ProjectTitle p:first-child {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #c8c8c8;
+}
 main section#select ul li .ProjectTitle::after {
   content: "";
   position: absolute;
@@ -406,16 +426,6 @@ main section#select ul li .ProjectTitle::after {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%);
   opacity: 1;
   pointer-events: none;
-}
-main section#select ul li .ProjectTitle p {
-  font-size: 3rem;
-  font-weight: 500;
-  color: #fff;
-}
-main section#select ul li .ProjectTitle p:first-child {
-  font-size: 1.4rem;
-  margin-bottom: 12px;
-  color: #c8c8c8;
 }
 main section#about {
   width: 100%;
@@ -440,7 +450,7 @@ main section#about img {
 main section#about img.less {
   display: block;
   position: absolute;
-  top: 1vh;
+  top: 0vh;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -512,7 +522,7 @@ main section#about div span.go:hover {
 }
 main section#about div span i {
   cursor: pointer;
-  margin-left: 14px;
+  margin-left: 1px;
   margin-top: 10px;
   font-size: 3.2rem;
   -webkit-transition: all 0.6s;
@@ -615,6 +625,224 @@ footer span {
   font-size: 1.2rem;
 }
 
+@media screen and (max-width: 1024px) {
+  header {
+    z-index: 2;
+    background: transparent;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100%;
+    gap: 20px;
+    mix-blend-mode: difference;
+    color: #fff;
+  }
+  header #leftGnb {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: auto !important;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100% !important;
+    top: 0;
+    height: 100vh;
+    right: -100%;
+    padding-top: 100px;
+    z-index: 2;
+  }
+  header #leftGnb ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+  header #leftGnb ul li {
+    line-height: 80px;
+    width: 100%;
+    text-indent: 3%;
+    width: 100%;
+  }
+  header #leftGnb ul li:nth-child(5) {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+  }
+  header #leftGnb ul li a {
+    font-size: 1.8rem;
+  }
+  header #leftGnb.active {
+    opacity: 1;
+    visibility: visible;
+    right: 0;
+    background: #fff;
+    color: #19160f;
+  }
+  header #rightGnb {
+    width: auto !important;
+  }
+  header #rightGnb ul li i {
+    opacity: 1;
+    visibility: visible;
+    font-size: 2rem;
+    position: static;
+  }
+  header #rightGnb ul li span:not(#toggleBtn span) {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+  header #rightGnb ul li:nth-child(4) {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+  header #rightGnb ul li:last-child {
+    opacity: 1;
+    visibility: visible;
+    position: static !important;
+  }
+  header #rightGnb ul li:last-child #toggleBtn {
+    width: 22px;
+    height: 16px;
+    z-index: 3;
+  }
+  header #rightGnb ul li:last-child #toggleBtn.active span {
+    background: #19160f;
+  }
+  header #rightGnb ul li:last-child #toggleBtn.active span:first-child {
+    top: 50%;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  header #rightGnb ul li:last-child #toggleBtn.active span:nth-child(2) {
+    opacity: 0;
+  }
+  header #rightGnb ul li:last-child #toggleBtn.active span:last-child {
+    top: 50%;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  header #logo {
+    position: static;
+    -webkit-transform: none;
+            transform: none;
+    width: auto;
+    z-index: 3;
+    left: 3%;
+  }
+  header #logo a {
+    font-size: 2.4rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  main section#intro span {
+    top: 3%;
+    font-size: 17vw;
+  }
+  main section#contents {
+    padding: 0 6%;
+    padding-top: 12%;
+  }
+  main section#contents h4 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+  main section#contents ul li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main section#contents ul li a {
+    font-size: 5rem;
+    letter-spacing: -0.1rem;
+  }
+  main section#contents ul li a i {
+    font-size: 2.6rem;
+  }
+  main section#contents ul li:hover div {
+    opacity: 0;
+  }
+  main section#select {
+    padding: 0 6%;
+  }
+  main section#select h4 {
+    font-size: 4.4rem;
+    margin-top: 20px;
+  }
+  main section#select ul li {
+    margin-bottom: 14px;
+    border-radius: 8px;
+  }
+  main section#select ul li .ProjectTitle div:first-child {
+    position: absolute;
+    bottom: 10%;
+    left: 6%;
+  }
+  main section#select ul li .ProjectTitle p {
+    font-size: 2.2rem;
+  }
+  main section#select ul li .ProjectTitle p:first-child {
+    font-size: 1rem;
+  }
+  main section#about {
+    margin-top: 40px;
+    height: 60vh;
+  }
+  main section#about img.less {
+    top: 4vh;
+    width: 84%;
+  }
+  main section#about div {
+    gap: 4px;
+  }
+  main section#about div span {
+    font-size: 1rem;
+  }
+  main section#about div span i.fa-phone {
+    margin-right: 4px;
+    font-size: 1rem;
+  }
+  main section#about div span i.fa-envelope {
+    margin-right: 6px;
+    font-size: 1rem;
+  }
+  main section#about div span i.fa-face-smile-wink {
+    margin-right: 6px;
+    font-size: 1rem;
+  }
+  main section#about div span i {
+    font-size: 2rem;
+    margin-left: 2px;
+  }
+  main section#scrollSection .marquee div {
+    font-size: 1rem;
+    padding: 12px;
+    gap: 120px;
+  }
+  footer {
+    padding: 6% 4%;
+  }
+  footer div {
+    height: 200px;
+  }
+  footer div i {
+    font-size: 3rem;
+  }
+  footer p {
+    font-size: 3rem;
+  }
+  footer span {
+    font-size: 1rem;
+  }
+}
 @-webkit-keyframes scrolling {
   0% {
     -webkit-transform: translateX(0);
@@ -625,7 +853,6 @@ footer span {
             transform: translateX(-100%);
   }
 }
-
 @keyframes scrolling {
   0% {
     -webkit-transform: translateX(0);

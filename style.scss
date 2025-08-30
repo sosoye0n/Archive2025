@@ -40,12 +40,19 @@ header {
   backdrop-filter: blur(4px) saturate(180%);
   -webkit-backdrop-filter: blur(16px);
   background-color: rgba(47, 47, 47, 0.759);
-  // background: transparent;
-  // border: 1px solid rgba(255, 255, 255, 0.125);
+  mix-blend-mode: difference;
   color: #a1a1a1;
   transition: all 0.5s;
   &.active {
     top: -60px;
+  }
+  &.active {
+    transform: translateY(-70px);
+  }
+  &.blendMode {
+    mix-blend-mode: normal;
+    color: map-get($map: $color, $key: dark);
+    scroll-behavior: none;
   }
   h1 {
     width: 14px;
@@ -147,40 +154,22 @@ body {
   overflow: hidden;
 }
 
-// header {
-//   div {
-//     position: absolute;
-//     padding: 1.6%;
-//     a {
-//       width: 100%;
-//       height: 100%;
-//       img {
-//         width: 40px;
-//         // mix-blend-mode: difference;
-//       }
-//     }
-//   }
-// }
-
 main {
   section {
     &#intro {
+      width: 100%;
+      height: 100vh;
+      color: #fff;
+      background: url("./imgs/introBG.png") center/cover no-repeat;
       video {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        // transform: scaleX(-1);
-        // transform: scaleY(-1);
-        // transform: rotate(-180deg);
         transition: opacity 2s ease-in-out;
         .fade-in {
           opacity: 1;
         }
       }
-      color: #fff;
-      width: 100%;
-      height: 100vh;
-      background: url("./imgs/introBG.png") center/cover no-repeat;
       position: relative;
       overflow: hidden;
       img {
@@ -286,10 +275,10 @@ main {
           margin-bottom: 20px;
           width: 100%;
           a {
-            transition: all 0.6s;
             &:hover {
               color: #323232;
             }
+            transition: all 0.6s;
             font-size: 8rem;
             font-weight: 600;
             letter-spacing: -0.3rem;
@@ -351,6 +340,9 @@ main {
           border-radius: 10px;
           .ProjectTitle {
             cursor: pointer;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             div {
               overflow: hidden;
               width: 100%;
@@ -361,9 +353,6 @@ main {
                 z-index: 2;
               }
             }
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
             img {
               transition: all 0.6s;
               &:hover {
@@ -375,28 +364,6 @@ main {
               object-fit: cover;
               overflow: hidden;
               z-index: -1;
-              // &.gif {
-              //   // transform: scale(1.3);
-              // }
-            }
-            &::after {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              // background: rgba(0, 0, 0, 0.4); // 검은 반투명
-              background: linear-gradient(
-                to top,
-                rgba(0, 0, 0, 0.8) 0%,
-                /* 아래는 진한 검정 */ rgba(0, 0, 0, 0.2) 100% /* 위로 갈수록 투명 */
-              );
-              // backdrop-filter: saturate(120%);
-              // opacity: 0;
-              opacity: 1;
-              pointer-events: none;
-              // z-index: 1;
             }
             p {
               &:first-child {
@@ -407,6 +374,21 @@ main {
               font-size: 3rem;
               font-weight: 500;
               color: #fff;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.8) 0%,
+                /* 아래는 진한 검정 */ rgba(0, 0, 0, 0.2) 100% /* 위로 갈수록 투명 */
+              );
+              opacity: 1;
+              pointer-events: none;
             }
           }
         }
@@ -435,7 +417,7 @@ main {
       img.less {
         display: block;
         position: absolute;
-        top: 1vh;
+        top: 0vh;
         left: 50%;
         transform: translateX(-50%);
         width: 70%;
@@ -497,7 +479,7 @@ main {
           }
           i {
             cursor: pointer;
-            margin-left: 14px;
+            margin-left: 1px;
             margin-top: 10px;
             font-size: 3.2rem;
             transition: all 0.6s;
@@ -586,6 +568,240 @@ footer {
   }
   span {
     font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    z-index: 2;
+    background: transparent;
+    transition: all 0.3s;
+    width: 100%;
+    gap: 20px;
+    mix-blend-mode: difference;
+    color: map-get($map: $color, $key: light);
+    #leftGnb {
+      flex-direction: column;
+      width: auto !important;
+      position: fixed;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      width: 100% !important;
+      top: 0;
+      height: 100vh;
+      right: -100%;
+      padding-top: 100px;
+      z-index: 2;
+      ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        li {
+          line-height: 80px;
+          width: 100%;
+          text-indent: 3%;
+          width: 100%;
+          &:nth-child(5) {
+            opacity: 1;
+            visibility: visible;
+            position: static;
+          }
+          a {
+            font-size: 1.8rem;
+          }
+        }
+      }
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        right: 0;
+        background: map-get($map: $color, $key: light);
+        color: map-get($map: $color, $key: dark);
+      }
+    }
+    #rightGnb {
+      width: auto !important;
+      ul {
+        li {
+          i {
+            opacity: 1;
+            visibility: visible;
+            font-size: 2rem;
+            position: static;
+          }
+          span {
+            &:not(#toggleBtn span) {
+              opacity: 0;
+              visibility: hidden;
+              position: absolute;
+            }
+          }
+          &:nth-child(4) {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+          }
+          &:last-child {
+            opacity: 1;
+            visibility: visible;
+            position: static !important;
+            #toggleBtn {
+              width: 22px;
+              height: 16px;
+              z-index: 3;
+              &.active {
+                span {
+                  background: map-get($map: $color, $key: dark);
+                  &:first-child {
+                    top: 50%;
+                    transform: rotate(45deg);
+                  }
+                  &:nth-child(2) {
+                    opacity: 0;
+                  }
+                  &:last-child {
+                    top: 50%;
+                    transform: rotate(-45deg);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #logo {
+      position: static;
+      transform: none;
+      width: auto;
+      z-index: 3;
+      left: 3%;
+      a {
+        font-size: 2.4rem;
+        justify-content: start;
+      }
+    }
+  }
+
+  main {
+    section {
+      &#intro {
+        // height: 100%;
+        span {
+          top: 3%;
+          font-size: 17vw;
+        }
+      }
+      &#contents {
+        // padding: 5%;
+        padding: 0 6%;
+        padding-top: 12%;
+        h4 {
+          font-size: 1.4rem;
+          margin-bottom: 20px;
+        }
+        ul {
+          li {
+            flex-direction: column;
+            a {
+              // width: 70%;
+              font-size: 5rem;
+              letter-spacing: -0.1rem;
+              i {
+                font-size: 2.6rem;
+              }
+            }
+            &:hover div {
+              opacity: 0;
+            }
+          }
+        }
+      }
+      &#select {
+        padding: 0 6%;
+        h4 {
+          font-size: 4.4rem;
+          margin-top: 20px;
+        }
+        ul {
+          li {
+            margin-bottom: 14px;
+            border-radius: 8px;
+            .ProjectTitle {
+              div {
+                &:first-child {
+                  position: absolute;
+                  bottom: 10%;
+                  left: 6%;
+                }
+              }
+              p {
+                &:first-child {
+                  font-size: 1rem;
+                }
+                font-size: 2.2rem;
+              }
+            }
+          }
+        }
+      }
+      &#about {
+        margin-top: 40px;
+        height: 60vh;
+        img.less {
+          top: 4vh;
+          width: 84%;
+        }
+        div {
+          gap: 4px;
+          span {
+            font-size: 1rem;
+            i.fa-phone {
+              margin-right: 4px;
+              font-size: 1rem;
+            }
+            i.fa-envelope {
+              margin-right: 6px;
+              font-size: 1rem;
+            }
+            i.fa-face-smile-wink {
+              margin-right: 6px;
+              font-size: 1rem;
+            }
+            i {
+              font-size: 2rem;
+              margin-left: 2px;
+            }
+          }
+        }
+      }
+      &#scrollSection {
+        .marquee {
+          div {
+            font-size: 1rem;
+            padding: 12px;
+            gap: 120px;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    padding: 6% 4%;
+    div {
+      height: 200px;
+      i {
+        font-size: 3rem;
+      }
+    }
+    p {
+      font-size: 3rem;
+    }
+    span {
+      font-size: 1rem;
+    }
   }
 }
 

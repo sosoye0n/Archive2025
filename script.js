@@ -1,4 +1,4 @@
-// lenis 라이브러리 (있다면 사용)
+// lenis 라이브러리
 if (typeof Lenis === "function") {
   const lenis = new Lenis();
 
@@ -12,7 +12,9 @@ if (typeof Lenis === "function") {
   requestAnimationFrame(raf);
 }
 
+//header
 const header = document.querySelector("header");
+// const searchWrap = document.querySelector("#searchWrap");
 const headerInner = `
       <h1>
         <a href="index.html" title="Home">
@@ -44,6 +46,7 @@ const headerInner = `
 `;
 header.innerHTML = headerInner;
 
+//footer
 const footer = document.querySelector("footer");
 const footerInner = `
 <div>
@@ -74,6 +77,7 @@ const footerInner = `
 `;
 footer.innerHTML = footerInner;
 
+//rolling
 const rollingBanner = document.querySelectorAll("scrollSection");
 const rollingBannerInner = `
 <article class="marquee">
@@ -117,3 +121,26 @@ const rollingBannerInner = `
 `;
 
 section.innerHTML = rollingBannerInner;
+
+//
+const toggleBtn = document.querySelector("#toggleBtn");
+const leftGnb = document.querySelector("#leftGnb");
+toggleBtn.addEventListener("click", function () {
+  this.classList.toggle("active");
+  leftGnb.classList.toggle("active");
+  header.classList.toggle("blendMode");
+  header.style.transform = "none";
+});
+
+const searchBtn = document.querySelector("#rightGnb ul li:first-child");
+searchBtn.addEventListener("click", () => {
+  const closeBtn = document.querySelector("#closeBtn");
+  const searchBg = document.querySelector("#searchBg");
+  searchWrap.classList.add("active");
+  closeBtn.addEventListener("click", () => {
+    searchWrap.classList.remove("active");
+  });
+  searchBg.addEventListener("click", () => {
+    searchWrap.classList.remove("active");
+  });
+});

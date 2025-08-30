@@ -20,7 +20,6 @@ body {
   font-size: 62.5%;
   color: #161515;
   background: #e8e8e9;
-  font-family: "yoon";
 }
 
 main section {
@@ -126,4 +125,30 @@ main section#projectContainer .projectBoxWrapper .projectBox .hoverBox .hoverInf
 main section#projectContainer .projectBoxWrapper .projectBox:hover .hoverBox {
   opacity: 1;
   visibility: visible;
+}
+
+@media screen and (max-width: 1024px) {
+  main section#topImg {
+    width: 80%;
+  }
+  main section#category {
+    margin-top: 150px;
+  }
+  main section#category h4 {
+    font-size: 6rem;
+  }
+  main section#category ul {
+    margin-bottom: 30px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main section#category ul li {
+    font-size: 1rem;
+  }
+  main section#projectContainer .projectBoxWrapper .projectBox {
+    width: 100%;
+  }
+  main section#projectContainer .projectBoxWrapper .projectBox .hoverBox .hoverInfo span {
+    font-size: 2.4rem;
+  }
 }
