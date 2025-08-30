@@ -13,23 +13,23 @@ promotion[3].addEventListener("click", () => {
   window.location.href = "./pages/a04.html";
 });
 promotion[4].addEventListener("click", () => {
-  window.location.href = "./pages/a05.html";
+  window.location.href = "#";
 });
 promotion[5].addEventListener("click", () => {
-  window.location.href = "./pages/a06.html";
+  window.location.href = "#";
 });
 promotion[6].addEventListener("click", () => {
-  window.location.href = "./pages/a07.html";
+  window.location.href = "#";
 });
 promotion[7].addEventListener("click", () => {
-  window.location.href = "./pages/a08.html";
+  window.location.href = "#";
 });
 promotion[8].addEventListener("click", () => {
-  window.location.href = "./pages/a09.html";
+  window.location.href = "#";
 });
 promotion[9].addEventListener("click", () => {
-  window.location.href = "./pages/a10.html";
+  window.location.href = ".#";
 });
 promotion[10].addEventListener("click", () => {
-  window.location.href = "./pages/a11.html";
+  window.location.href = "#";
 });

@@ -10,7 +10,7 @@
 
 html {
   font-size: 62.5%;
-  background: #e8e8e9;
+  background: #1a1a1a;
   color: #161515;
   font-family: "Faktum";
 }
@@ -137,7 +137,7 @@ header {
 }
 
 body {
-  background: #e8e8e9;
+  background: #cab7a8;
   font-family: "Noto Sans";
   i {
     font-size: 1rem;
@@ -222,23 +222,6 @@ section {
           line-height: 2;
           color: #3c3c3c;
         }
-        .skill {
-          width: 100%;
-          gap: 20px;
-          div {
-            display: flex;
-            gap: 10px;
-            width: 40px;
-            height: 40px;
-            margin-top: 50px;
-            img {
-              width: 100%;
-              object-fit: cover;
-              background: #000;
-              border-radius: 6px;
-            }
-          }
-        }
       }
     }
   }
@@ -298,9 +281,14 @@ section {
         // width: 80%;
         display: flex;
         justify-content: center;
+        padding: 4%;
+        height: 800px;
+        width: 100%;
         img {
           width: 100%;
+          height: 100%;
           object-fit: cover;
+          border-radius: 20px;
         }
       }
       &.userResearch {
@@ -377,7 +365,8 @@ section {
     flex-direction: column;
     margin-top: 80px;
     padding: 8%;
-    background: #1e032d;
+    background: #4c443a;
+      background: #251e19;
     color: #fff;
     span {
       width: 40%;
@@ -437,13 +426,13 @@ section {
         margin-top: 60px;
         display: flex;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         // width: 50%;
         // gap: 20px;
         flex-wrap: wrap;
         background: #fff;
         width: 100%;
-        border-radius: 50px;
+        // border-radius: 50px;
         overflow: hidden;
         gap: 20px;
         img {

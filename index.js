@@ -1,12 +1,12 @@
 const projectLinks = [
-  "./pages/m1.html", // 첫 번째 li
-  "./pages/zip.html", // 첫 번째 li
-  "./pages/p02.html", // 첫 번째 li
-  "./pages/a01.html", // 첫 번째 li
-  "./pages/p04.html", // 첫 번째 li
-  "./pages/a02.html", // 첫 번째 li
-  "./pages/p03.html", // 첫 번째 li
-  "./pages/a04.html", // 첫 번째 li
+  "./pages/m1.html", 
+  "./pages/zip.html", 
+  "./pages/p06.html", 
+  "./pages/a01.html", 
+  "./pages/p04.html", 
+  "./pages/a02.html", 
+  "./pages/p03.html", 
+  "./pages/a04.html", 
 ];
 
 const projectItems = document.querySelectorAll("#selectedProjects li");

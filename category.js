@@ -19,17 +19,14 @@ promotion[5].addEventListener("click", () => {
   window.location.href = "./pages/p06.html";
 });
 promotion[6].addEventListener("click", () => {
-  window.location.href = "./pages/p07.html";
+  window.location.href = "#";
 });
 promotion[7].addEventListener("click", () => {
-  window.location.href = "./pages/p08.html";
+  window.location.href = "#";
 });
 promotion[8].addEventListener("click", () => {
-  window.location.href = "./pages/p09.html";
+  window.location.href = "#";
 });
 promotion[9].addEventListener("click", () => {
-  window.location.href = "./pages/p10.html";
-});
-promotion[10].addEventListener("click", () => {
-  window.location.href = "./pages/p11.html";
+  window.location.href = "#";
 });
