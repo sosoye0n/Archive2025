@@ -162,6 +162,7 @@ header #toggleBtn span:last-child {
 body {
   background: #302e9f;
   font-family: "Noto Sans";
+  overflow: hidden;
 }
 body i {
   font-size: 1rem;
@@ -280,7 +281,7 @@ section#detail01 div.background div h5 {
   margin-top: 20px;
 }
 section#detail01 div.background div p {
-  width: 70%;
+  width: 84%;
   font-size: 1.2rem;
   line-height: 2;
   font-weight: 400;

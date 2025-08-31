@@ -140,6 +140,7 @@ header {
 body {
   background: #302e9f;
   font-family: "Noto Sans";
+  overflow: hidden;
   i {
     font-size: 1rem;
   }
@@ -243,7 +244,7 @@ section {
             margin-top: 20px;
           }
           p {
-            width: 70%;
+            width: 84%;
             font-size: 1.2rem;
             line-height: 2;
             font-weight: 400;

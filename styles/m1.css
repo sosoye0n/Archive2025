@@ -167,6 +167,7 @@ body {
   background: #ffc000;
   background: #1e183c;
   font-family: "Noto Sans";
+  overflow: hidden;
 }
 body i {
   font-size: 1rem;

@@ -23,12 +23,6 @@ a {
   src: url("../fonts/FaktumRegular.otf");
 }
 @font-face {
-  font-family: "Firty Free";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Firty Free"), url("Firty-Free.woff") format("woff");
-}
-@font-face {
   font-family: "exmouth";
   src: url("../fonts/exmouth_.ttf");
 }
@@ -171,6 +165,7 @@ header #toggleBtn span:last-child {
 body {
   background: #e8e8e9;
   font-family: "Faktum";
+  overflow: hidden;
 }
 
 main {

@@ -165,6 +165,7 @@ header #toggleBtn span:last-child {
 body {
   background: #e8e8e9;
   font-family: "Noto Sans";
+  overflow: hidden;
 }
 body i {
   font-size: 1rem;

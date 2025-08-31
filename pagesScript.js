@@ -33,10 +33,7 @@ const headerInner = `
             <a href="../category2.html" title="Developer">Developer</a>
           </li>
           <li>
-            <a href="../category3.html" title="Artwork">Artwork</a>
-          </li>
-          <li>
-            <a href="../index.html" title="home">About Me</a>
+            <a href="../category3.html" title="Artwork">Graphic & 3D Artwork</a>
           </li>
         </ul>
         <p></p>
@@ -70,7 +67,8 @@ const footerInner = `
           </div>
         </div>
       </div>
-      <span>© 2025. Kim so yeon All Rights Reserved</span>
+      <span>© 2025 Kim So Yeon. All Rights Reserved.
+</span>
 `;
 footer.innerHTML = footerInner;
 

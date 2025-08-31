@@ -170,6 +170,7 @@ header #toggleBtn span:last-child {
 
 body {
   font-family: "Faktum";
+  overflow: hidden;
 }
 
 main {

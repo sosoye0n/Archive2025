@@ -48,10 +48,7 @@ const headerInner = `
             <a href="../category2.html" title="Developer">Developer</a>
           </li>
           <li>
-            <a href="../category3.html" title="Artwork">Artwork</a>
-          </li>
-          <li>
-            <a href="../index.html" title="home">About Me</a>
+            <a href="../category3.html" title="Artwork">Graphic & 3D Artwork</a>
           </li>
         </ul>
         <p></p>
