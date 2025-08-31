@@ -552,7 +552,7 @@ section#detail03 .thirdImg div {
   display: -ms-flexbox;
   display: flex;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background: #fff;
