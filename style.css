@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 * {
@@ -29,8 +30,11 @@ a {
   src: local("Firty Free"), url("Firty-Free.woff") format("woff");
 }
 @font-face {
-  font-family: "exmouth";
-  src: url("./fonts/exmouth_.ttf");
+  font-family: "Exmouth";
+  src: url("./fonts/exmouth.woff2") format("woff2"), url("./fonts/exmouth.woff") format("woff"); /* 브라우저 호환용 */
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; /* 로딩 전 시스템 폰트 표시 */
 }
 html {
   font-size: 62.5%;
