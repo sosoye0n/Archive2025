@@ -14,7 +14,6 @@
 
 html {
   font-size: 62.5%;
-  // font-family: "Noto Sans";
   background: #e8e8e9;
   color: #161515;
   font-family: "Faktum";
@@ -148,7 +147,6 @@ body {
 }
 main {
   width: 100%;
-  // background: url("../imgs/p0101.png") center/cover no-repeat;
 }
 section {
   width: 100%;
@@ -156,7 +154,6 @@ section {
   &#detail {
     width: 100%;
     height: 100%;
-    // margin: 6%;
     padding: 6% 0;
     background: #15152f;
     div {
@@ -175,7 +172,6 @@ section {
 //footer
 footer {
   width: 100%;
-  // height: 300px;
   font-family: "Faktum";
   height: 100%;
   color: #fff;
@@ -183,7 +179,6 @@ footer {
   background: #161515;
   div {
     height: 200px;
-    // height: 100%;
     display: flex;
     justify-content: space-between;
     i {
@@ -197,12 +192,10 @@ footer {
       }
     }
     div {
-      // background: cadetblue;
       height: 100%;
       display: flex;
       flex-direction: column;
       align-items: end;
-      // justify-content: end;
       gap: 6px;
       justify-content: space-between;
       i.fa-phone {

@@ -401,9 +401,6 @@ section {
   &#detail02 {
     width: 100%;
     height: 100%;
-    // margin-top: 80px;
-    // background: #ffc000;
-    // padding-top: 30px;
     background: url("../imgs/m1bg.jpg") center/cover no-repeat;
     color: #000;
     .descTitle {
@@ -430,12 +427,10 @@ section {
     }
     .secondImg {
       width: 100%;
-      // padding: 6%;
       overflow: hidden;
       height: 100%;
       background: #000;
       img {
-        // border-radius: 20px;
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -445,8 +440,6 @@ section {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      // aspect-ratio: 2 / 1;
-      // aspect-ratio: 20 / 1;
     }
   }
 }
@@ -454,7 +447,6 @@ section {
 //footer
 footer {
   width: 100%;
-  // height: 300px;
   font-family: "Faktum";
   height: 100%;
   color: #fff;
@@ -462,7 +454,6 @@ footer {
   background: #161515;
   div {
     height: 200px;
-    // height: 100%;
     display: flex;
     justify-content: space-between;
     i {
@@ -476,12 +467,10 @@ footer {
       }
     }
     div {
-      // background: cadetblue;
       height: 100%;
       display: flex;
       flex-direction: column;
       align-items: end;
-      // justify-content: end;
       gap: 6px;
       justify-content: space-between;
       i.fa-phone {

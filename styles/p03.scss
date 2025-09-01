@@ -173,8 +173,6 @@ section {
         height: 100%;
         display: flex;
         flex-direction: column;
-        // gap: 14px;
-        // margin: 50px 0;
         position: absolute;
         left: 6%;
         bottom: 10%;
@@ -230,7 +228,6 @@ section {
     width: 100%;
     height: 100%;
     padding: 0 5%;
-    // overflow: hidden;
     div {
       width: 100%;
       width: 100%;
@@ -238,7 +235,6 @@ section {
         width: 100%;
         img {
           width: 100%;
-          // height: 100%;
           object-fit: cover;
           border-radius: 20px;
         }
@@ -257,16 +253,13 @@ section {
           font-family: "Faktum";
         }
         div {
-          // width: 60%;
           display: flex;
           flex-direction: column;
-          // align-items: end;
           justify-content: start;
           h5 {
             width: 100%;
             font-size: 1.4rem;
             font-weight: 700;
-            // font-weight: 400;
             margin-bottom: 40px;
           }
           p {
@@ -279,7 +272,6 @@ section {
         }
       }
       &.descImg {
-        // width: 80%;
         display: flex;
         justify-content: center;
         padding: 4%;
@@ -306,11 +298,8 @@ section {
           font-family: "Faktum";
         }
         div {
-          // width: 60%;
           display: flex;
-          // flex-direction: column;
           flex-wrap: wrap;
-          // align-items: end;
           justify-content: start;
           h5 {
             width: 100%;
@@ -326,10 +315,8 @@ section {
               justify-content: center;
               align-items: center;
               text-align: center;
-              // display: block;
               width: 150px;
               height: 150px;
-              // width: 50%;
               font-size: 1.1rem;
               line-height: 1.4;
               letter-spacing: -0.2;
@@ -428,12 +415,9 @@ section {
         display: flex;
         display: grid;
         grid-template-columns: 1fr;
-        // width: 50%;
-        // gap: 20px;
         flex-wrap: wrap;
         background: #fff;
         width: 100%;
-        // border-radius: 50px;
         overflow: hidden;
         gap: 20px;
         img {
@@ -443,11 +427,6 @@ section {
         }
       }
     }
-    // img {
-    //   width: 100%;
-    //   height: 100%;
-    //   object-fit: cover;
-    // }
   }
   &#detail03 {
     width: 100%;
@@ -455,14 +434,12 @@ section {
     background: #e5e5e5;
     // color: #fff;
     .descTitle {
-      // padding: 10% 10% 5%;
       padding: 0 12%;
       display: flex;
       position: absolute;
       span {
         width: 30%;
         font-size: 1.4rem;
-        // display: block;
         text-transform: uppercase;
         font-family: "Faktum";
       }
@@ -483,7 +460,6 @@ section {
       position: relative;
       height: 100%;
       overflow: hidden;
-      // aspect-ratio: 2 / 1;
       div {
         width: 100%;
         &::after {
@@ -493,10 +469,8 @@ section {
           left: 0;
           width: 100%;
           height: 100%;
-          // background: rgba(0, 0, 0, 0.2);
           opacity: 1;
           pointer-events: none;
-          // z-index: 1;
         }
         display: flex;
         display: grid;
@@ -521,7 +495,6 @@ section {
 //footer
 footer {
   width: 100%;
-  // height: 300px;
   font-family: "Faktum";
   height: 100%;
   color: #fff;
@@ -529,7 +502,6 @@ footer {
   background: #161515;
   div {
     height: 200px;
-    // height: 100%;
     display: flex;
     justify-content: space-between;
     i {
@@ -543,12 +515,10 @@ footer {
       }
     }
     div {
-      // background: cadetblue;
       height: 100%;
       display: flex;
       flex-direction: column;
       align-items: end;
-      // justify-content: end;
       gap: 6px;
       justify-content: space-between;
       i.fa-phone {
