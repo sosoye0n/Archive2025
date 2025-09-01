@@ -174,7 +174,7 @@ section {
 section#cover {
   width: 100%;
   height: 100vh;
-  background: url("../imgs/a03.jpg") center/cover no-repeat;
+  background: url("../imgs/a03.webp") center/cover no-repeat;
 }
 section#detail {
   width: 100%;

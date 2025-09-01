@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ul,
@@ -38,7 +38,7 @@ header {
   z-index: 1;
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   bottom: 30px;
   border-radius: 10px;
   position: fixed;
@@ -48,12 +48,12 @@ header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 0 28px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   backdrop-filter: blur(4px) saturate(180%);
   -webkit-backdrop-filter: blur(16px);
   background-color: rgba(47, 47, 47, 0.759);
@@ -78,7 +78,7 @@ header h1 img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 header #gnb ul {
   display: -webkit-box;
@@ -86,8 +86,8 @@ header #gnb ul {
   display: flex;
   gap: 10px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 header #gnb ul li {
   font-family: "Faktum";
@@ -124,7 +124,7 @@ header p {
   position: absolute;
   background: url("./images/detail/circle_black.png") center/cover no-repeat;
   -webkit-animation: circle 10s linear infinite;
-          animation: circle 10s linear infinite;
+  animation: circle 10s linear infinite;
   bottom: -50px;
   right: -50px;
   z-index: 1;
@@ -195,7 +195,8 @@ section {
 section#cover {
   width: 100%;
   height: 100vh;
-  background: url("https://cdn.myportfolio.com/eb213d6d-d528-4af6-8093-e9ac554d2749/131673e5-e1f0-4c9e-b6b8-54f0a84b6d1b_rw_1920.jpg?h=6a91ecbb6f71efa360444acb85710b0d") center/cover no-repeat;
+  background: url("https://cdn.myportfolio.com/eb213d6d-d528-4af6-8093-e9ac554d2749/131673e5-e1f0-4c9e-b6b8-54f0a84b6d1b_rw_1920.jpg?h=6a91ecbb6f71efa360444acb85710b0d")
+    center/cover no-repeat;
   position: relative;
 }
 section#cover div.urlLink {
@@ -206,8 +207,8 @@ section#cover div.urlLink {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   position: absolute;
   left: 6%;
   bottom: 10%;
@@ -272,7 +273,7 @@ section#desc div.mainTitle .skill div {
 section#desc div.mainTitle .skill div img {
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   background: #000;
   border-radius: 6px;
 }
@@ -291,7 +292,7 @@ section#detail01 div.imgBox {
 section#detail01 div.imgBox img {
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 20px;
 }
 section#detail01 div.background {
@@ -316,11 +317,11 @@ section#detail01 div.background div {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
 }
 section#detail01 div.background div h5 {
   width: 100%;
@@ -340,13 +341,13 @@ section#detail01 div.descImg {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 section#detail01 div.descImg img {
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 section#detail01 div.userResearch {
   width: 100%;
@@ -369,10 +370,10 @@ section#detail01 div.userResearch div {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
 }
 section#detail01 div.userResearch div h5 {
   width: 100%;
@@ -391,11 +392,11 @@ section#detail01 div.userResearch div div p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: center;
   width: 150px;
   height: 150px;
@@ -423,8 +424,8 @@ section#designSystem {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin-top: 80px;
   padding: 8%;
   background: #0f0b1f;
@@ -446,7 +447,7 @@ section#designSystem div img {
   border-radius: 20px;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 section#detail02 {
   width: 100%;
@@ -473,14 +474,14 @@ section#detail02 .descTitle div {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -ms-flex-align: start;
+  align-items: start;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
 }
 section#detail02 .descTitle div p {
   font-size: 1.2rem;
@@ -497,13 +498,13 @@ section#detail02 .secondImg img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 section#detail02 img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 footer {
@@ -520,8 +521,8 @@ footer div {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 footer div i {
   cursor: pointer;
@@ -541,15 +542,15 @@ footer div div {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  -ms-flex-align: end;
+  align-items: end;
   gap: 6px;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 footer div div i.fa-phone {
   margin-right: 4px;
