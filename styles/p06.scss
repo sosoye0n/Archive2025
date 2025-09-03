@@ -319,10 +319,11 @@ section {
     padding-bottom: 120px;
     color: #000;
     .descTitle {
-      padding: 6% 10% 2%;
+      padding: 6% 16% 2%;
       display: flex;
+      justify-content: center;
       span {
-        width: 40%;
+        width: 20%;
         font-size: 1.4rem;
         display: block;
         text-transform: uppercase;

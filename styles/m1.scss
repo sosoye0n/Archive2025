@@ -169,7 +169,7 @@ section {
     height: 100vh;
     background: url("https://cdn.myportfolio.com/eb213d6d-d528-4af6-8093-e9ac554d2749/131673e5-e1f0-4c9e-b6b8-54f0a84b6d1b_rw_1920.jpg?h=6a91ecbb6f71efa360444acb85710b0d")
       center/cover no-repeat;
-    position: relative;
+    // position: relative;
     div {
       &.urlLink {
         width: 100%;
@@ -400,10 +400,11 @@ section {
     background: url("../imgs/m1bg.jpg") center/cover no-repeat;
     color: #000;
     .descTitle {
-      padding: 10% 10% 5%;
+      padding: 10% 15% 5%;
       display: flex;
+      justify-content: center;
       span {
-        width: 40%;
+        width: 20%;
         font-size: 1.4rem;
         display: block;
         text-transform: uppercase;
@@ -490,5 +491,181 @@ footer {
   }
   span {
     font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    z-index: 2;
+    background: transparent;
+    transition: all 0.3s;
+    width: 100%;
+    gap: 20px;
+    mix-blend-mode: difference;
+    color: map-get($map: $color, $key: light);
+    #leftGnb {
+      flex-direction: column;
+      width: auto !important;
+      position: fixed;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      width: 100% !important;
+      top: 0;
+      height: 100vh;
+      right: -100%;
+      padding-top: 100px;
+      z-index: 2;
+      ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        li {
+          line-height: 80px;
+          width: 100%;
+          text-indent: 3%;
+          width: 100%;
+          &:nth-child(5) {
+            opacity: 1;
+            visibility: visible;
+            position: static;
+          }
+          a {
+            font-size: 1.8rem;
+          }
+        }
+      }
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        right: 0;
+        background: map-get($map: $color, $key: light);
+        color: map-get($map: $color, $key: dark);
+      }
+    }
+    #rightGnb {
+      width: auto !important;
+      ul {
+        li {
+          i {
+            opacity: 1;
+            visibility: visible;
+            font-size: 2rem;
+            position: static;
+          }
+          span {
+            &:not(#toggleBtn span) {
+              opacity: 0;
+              visibility: hidden;
+              position: absolute;
+            }
+          }
+          &:nth-child(4) {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+          }
+          &:last-child {
+            opacity: 1;
+            visibility: visible;
+            position: static !important;
+            #toggleBtn {
+              width: 22px;
+              height: 16px;
+              z-index: 3;
+              &.active {
+                span {
+                  background: map-get($map: $color, $key: dark);
+                  &:first-child {
+                    top: 50%;
+                    transform: rotate(45deg);
+                  }
+                  &:nth-child(2) {
+                    opacity: 0;
+                  }
+                  &:last-child {
+                    top: 50%;
+                    transform: rotate(-45deg);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #logo {
+      position: static;
+      transform: none;
+      width: auto;
+      z-index: 3;
+      left: 3%;
+      a {
+        font-size: 2.4rem;
+        justify-content: start;
+      }
+    }
+  }
+  main {
+    section {
+      &#cover {
+        height: 80vh;
+      }
+      &#desc {
+        div {
+          &.mainTitle {
+            margin-top: 50px;
+            span {
+              font-size: 1.2rem;
+            }
+            h5 {
+              font-size: 2rem;
+              margin: 10px 0 20px 0;
+            }
+            p {
+              width: 90%;
+            }
+          }
+        }
+      }
+      &#detail01 {
+        div {
+          &.background {
+            flex-direction: column;
+            span {
+              margin-bottom: 20px;
+              font-size: 1.2rem;
+            }
+            div {
+              h5 {
+                margin-bottom: 20px;
+              }
+            }
+          }
+        }
+      }
+      &#designSystem {
+        span {
+          font-size: 2rem;
+        }
+        div {
+          img {
+            border-radius: 6px;
+          }
+        }
+      }
+      &#detail02 {
+        .descTitle {
+          flex-direction: column;
+          span {
+            font-size: 1.2rem;
+            font-weight: bold;
+          }
+          div {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
   }
 }

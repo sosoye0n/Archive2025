@@ -796,6 +796,74 @@ footer {
   }
 }
 
+@media screen and (max-width: 767px) {
+  header {
+    gap: 10px;
+    #rightGnb {
+      ul {
+        li {
+          i {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    #logo {
+      a {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  main {
+    section {
+      &#intro {
+        // height: 100%;
+        width: 100%;
+        video {
+          width: 100%;
+          height: 100%;
+        }
+        img {
+        }
+      }
+      &#contents {
+        padding-top: 20%;
+        ul {
+          li {
+            margin-top: 20px;
+            a {
+              font-size: 3.6rem;
+              i {
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+      }
+      &#select {
+        h4 {
+          font-size: 4rem;
+        }
+        ul {
+          li {
+            .ProjectTitle {
+              p {
+                font-size: 1.8rem;
+              }
+            }
+          }
+        }
+      }
+      &#about {
+        margin-top: 0px;
+        img.less {
+          top: 12%;
+        }
+      }
+    }
+  }
+}
+
 //애니메이션
 @keyframes scrolling {
   0% {

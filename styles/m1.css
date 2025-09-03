@@ -192,7 +192,6 @@ section#cover {
   width: 100%;
   height: 100vh;
   background: url("https://cdn.myportfolio.com/eb213d6d-d528-4af6-8093-e9ac554d2749/131673e5-e1f0-4c9e-b6b8-54f0a84b6d1b_rw_1920.jpg?h=6a91ecbb6f71efa360444acb85710b0d") center/cover no-repeat;
-  position: relative;
 }
 section#cover div.urlLink {
   width: 100%;
@@ -451,13 +450,16 @@ section#detail02 {
   color: #000;
 }
 section#detail02 .descTitle {
-  padding: 10% 10% 5%;
+  padding: 10% 15% 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 section#detail02 .descTitle span {
-  width: 40%;
+  width: 20%;
   font-size: 1.4rem;
   display: block;
   text-transform: uppercase;
@@ -566,4 +568,171 @@ footer p {
 }
 footer span {
   font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    z-index: 2;
+    background: transparent;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100%;
+    gap: 20px;
+    mix-blend-mode: difference;
+    color: #fff;
+  }
+  header #leftGnb {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: auto !important;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100% !important;
+    top: 0;
+    height: 100vh;
+    right: -100%;
+    padding-top: 100px;
+    z-index: 2;
+  }
+  header #leftGnb ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+  header #leftGnb ul li {
+    line-height: 80px;
+    width: 100%;
+    text-indent: 3%;
+    width: 100%;
+  }
+  header #leftGnb ul li:nth-child(5) {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+  }
+  header #leftGnb ul li a {
+    font-size: 1.8rem;
+  }
+  header #leftGnb.active {
+    opacity: 1;
+    visibility: visible;
+    right: 0;
+    background: #fff;
+    color: #19160f;
+  }
+  header #rightGnb {
+    width: auto !important;
+  }
+  header #rightGnb ul li i {
+    opacity: 1;
+    visibility: visible;
+    font-size: 2rem;
+    position: static;
+  }
+  header #rightGnb ul li span:not(#toggleBtn span) {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+  header #rightGnb ul li:nth-child(4) {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+  header #rightGnb ul li:last-child {
+    opacity: 1;
+    visibility: visible;
+    position: static !important;
+  }
+  header #rightGnb ul li:last-child #toggleBtn {
+    width: 22px;
+    height: 16px;
+    z-index: 3;
+  }
+  header #rightGnb ul li:last-child #toggleBtn.active span {
+    background: #19160f;
+  }
+  header #rightGnb ul li:last-child #toggleBtn.active span:first-child {
+    top: 50%;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  header #rightGnb ul li:last-child #toggleBtn.active span:nth-child(2) {
+    opacity: 0;
+  }
+  header #rightGnb ul li:last-child #toggleBtn.active span:last-child {
+    top: 50%;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  header #logo {
+    position: static;
+    -webkit-transform: none;
+            transform: none;
+    width: auto;
+    z-index: 3;
+    left: 3%;
+  }
+  header #logo a {
+    font-size: 2.4rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  main section#cover {
+    height: 80vh;
+  }
+  main section#desc div.mainTitle {
+    margin-top: 50px;
+  }
+  main section#desc div.mainTitle span {
+    font-size: 1.2rem;
+  }
+  main section#desc div.mainTitle h5 {
+    font-size: 2rem;
+    margin: 10px 0 20px 0;
+  }
+  main section#desc div.mainTitle p {
+    width: 90%;
+  }
+  main section#detail01 div.background {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main section#detail01 div.background span {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+  main section#detail01 div.background div h5 {
+    margin-bottom: 20px;
+  }
+  main section#designSystem span {
+    font-size: 2rem;
+  }
+  main section#designSystem div img {
+    border-radius: 6px;
+  }
+  main section#detail02 .descTitle {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main section#detail02 .descTitle span {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  main section#detail02 .descTitle div {
+    margin-top: 20px;
+  }
 }

@@ -845,6 +845,48 @@ footer span {
     font-size: 1rem;
   }
 }
+@media screen and (max-width: 767px) {
+  header {
+    gap: 10px;
+  }
+  header #rightGnb ul li i {
+    font-size: 1rem;
+  }
+  header #logo a {
+    font-size: 1.4rem;
+  }
+  main section#intro {
+    width: 100%;
+  }
+  main section#intro video {
+    width: 100%;
+    height: 100%;
+  }
+  main section#contents {
+    padding-top: 20%;
+  }
+  main section#contents ul li {
+    margin-top: 20px;
+  }
+  main section#contents ul li a {
+    font-size: 3.6rem;
+  }
+  main section#contents ul li a i {
+    font-size: 2rem;
+  }
+  main section#select h4 {
+    font-size: 4rem;
+  }
+  main section#select ul li .ProjectTitle p {
+    font-size: 1.8rem;
+  }
+  main section#about {
+    margin-top: 0px;
+  }
+  main section#about img.less {
+    top: 12%;
+  }
+}
 @-webkit-keyframes scrolling {
   0% {
     -webkit-transform: translateX(0);
